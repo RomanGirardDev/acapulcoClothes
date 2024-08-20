@@ -1,0 +1,218 @@
+/* Header style */
+.header {
+    background-color: black;
+}
+
+#h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: white;
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: auto;
+    width: 50%;
+}
+
+.headerImg {
+    width: 15vh;
+    height: 10vh;
+}
+
+/** Header style */
+
+/* H format */
+.h2Section{
+    display: flex;
+    background-color: rgb(83, 79, 79);
+    flex-direction: column;
+    justify-content: center;  
+    border: 1px solid white;
+}
+
+.h2Section h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#h2Contact {
+    background-color: rgb(26, 25, 25);
+    display: inline-block;
+    color: white;
+}
+
+#h3 {
+    color: white;
+}
+/** H format */
+
+/* Format principal Links */
+.buttonSections {
+    background-color: rgb(83, 79, 79);
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    justify-content: center;  
+    flex-wrap: wrap;
+    align-items: center;
+    position:sticky;
+    margin: 0.5px;
+}
+
+.buttonSections nav{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+.buttonSections nav a{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+/*  */
+.buttonSections h2{
+    color: white;
+    display: inline-block;
+}
+.buttonSections input{
+    display: inline-block;
+    height: 4vh;
+}
+
+/*  */
+
+/* Format principal Links */
+
+.body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+/* Products format */
+.productContainer{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0.5px;
+    
+}
+
+.productContainer img{
+    height: 70vh;
+    width: 33%;
+    object-fit: cover;
+}
+
+.productForm{
+    display:flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5px;
+    padding: 2%;    
+}
+.productForm form{
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.productForm form section{
+    color: white;
+}
+.productForm form img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.productForm form input{
+    height: 4vh;
+}
+/** Products format */
+
+/* Class for center all components */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/** Class for center all components */
+
+/* Main format */
+.imgPrincipal {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainImg {
+    background-color: white;
+}
+
+/** Main format */
+
+/* List format */
+.ul {
+    font-size: 2rem;
+    color: black;
+}
+
+.li {
+    color: white;
+}
+
+/** List format */
+
+.mainContact {
+    background-color: rgb(26, 25, 25);
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer format*/
+.footerIndex {
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border: 1px solid white;
+    align-items: center;
+}
+
+.footerIndex img{
+    width: 15vh;
+    height: 10vh;
+}
+
+.footerIndex p {
+    font-size: 1.5rem;
+    color: rgb(222, 10, 173);
+    align-items: center;
+    margin-left: 40%;
+}
+
+.pFooter {
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(222, 10, 173);
+    background-color: black;
+}
+
+/** Footer format*/
