@@ -1,0 +1,316 @@
+@import './utilities/mixins';
+@import './utilities/extends';
+
+
+/* se puede usar el @use para referir a un módulo de scss particular que tiene la variable que queremos
+ y se le puede poner as "nombre" para darle un nombre que nos quede cómodo y luego usarlo con ese 
+ "nombre".$variable 
+ 
+ ver el orden de las importaciones para que las reconozca en orden correctamente
+ 
+ ver que con los extends usa el % al principio de la variable
+ 
+ sass --watch scss/styles.css css/styles.css*/
+
+/* Header style */
+
+.header {
+    background-color: black;
+    padding-top: 1%;
+    padding-block-end: 1%;
+}
+
+#h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: white;
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: auto;
+    width: 50%;
+}
+
+#navbarSupportedContent{
+    align-items: center;
+    gap: 1%;
+    justify-content: center;  
+}
+
+.headerImg {
+    width: 15vh;
+    height: 10vh;
+}
+
+/** Header style */
+
+/* H format */
+.h2Section{
+    background-color: rgb(83, 79, 79);
+    flex-direction: column;
+    justify-content: center;  
+    border: 1px solid white;
+}
+
+.h2Section h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#h2Contact {
+    background-color: rgb(26, 25, 25);
+    display: inline-block;
+    color: white;
+}
+
+#h3 {
+    color: white;
+}
+/** H format */
+
+/* Format principal Links */
+.buttonSections {
+    background-color: rgb(83, 79, 79);
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    justify-content: center;  
+    flex-wrap: wrap;
+    align-items: center;
+    position:sticky;
+    margin: 0.5px;
+}
+
+.buttonSections nav{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+.buttonSections nav a{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+.generalSearch{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-item{
+    display: flex;
+    flex-direction:row;
+
+    gap: 10%;
+    align-content:center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 4vh;
+    color: white;
+    padding: 1%;
+}
+
+
+/*  */
+.buttonSections h2{
+    color: white;
+    display: inline-block;
+}
+.buttonSections input{
+    display: inline-block;
+    height: 4vh;
+}
+
+/*  */
+
+/* Format principal Links */
+
+.body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+/* Products format */
+.productContainer{
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+
+#carouselExample{
+    background-color: black;
+    padding: 1%;
+}
+
+.carousel-item{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img{
+    height: $heightImg;
+}
+
+.productNav{
+    @include flex(flex, center, center);
+    gap: 1rem; /* Espacio entre las imágenes */
+}
+
+.imgNav{
+    width: 100px; /* Ancho fijo para las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.productContainer img{
+    height: $heightImg;
+    width: 33%;
+    object-fit: cover;
+}
+
+.productForm{
+    @include flex(flex, center, center);
+    background-color: black;
+    margin: 0.5px;
+    padding: 2%;    
+}
+.productForm form{
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.productForm form section{
+    color: white;
+}
+.productForm form img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.productForm form input{
+    height: 4vh;
+}
+/** Products format */
+
+/* Class for center all components */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/** Class for center all components */
+
+/* Main format */
+.imgPrincipal {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainImg {
+    background-color: rgb(38, 44, 58);
+}
+
+/** Main format */
+
+/* List format */
+.ul {
+    font-size: 2rem;
+    color: black;
+}
+
+.li {
+    color: white;
+}
+
+/** List format */
+
+.mainContact {
+    background-color: rgb(26, 25, 25);
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer format*/
+.footerIndex {
+    @include flex(flex, center, center);
+    flex-direction:row;
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.footerIndex img{
+    width: 15vh;
+    height: 10vh;
+}
+
+.footerIndex p {
+    font-size: 1.5rem;
+    color: rgb(222, 10, 173);
+    align-items: center;
+    margin-left: 40%;
+}
+
+.pFooter {
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(222, 10, 173);
+    background-color: black;
+}
+
+/** Footer format*/
+
+
+/* Estilos generales */
+
+/* Estilos para pantallas de menos de 768px (dispositivos móviles) */
+@media (max-width: 767.98px) {
+    .productContainer{
+        background-color: rgb(55, 51, 51);
+    }
+    .footerIndex{
+        background-color: rgb(55, 51, 51);
+    }
+}
+
+/* Estilos para pantallas entre 768px y 991.98px (tabletas) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .productContainer{
+        background-color: rgb(30, 27, 27);
+    }
+    .footerIndex{
+        background-color: rgb(30, 27, 27);
+    }
+}
+
+/* Estilos para pantallas mayores de 992px (escritorios) */
+@media (min-width: 992px) {
+    .productContainer{
+        background-color: rgb(0, 0, 0);
+    }
+    .footerIndex{
+        background-color: rgb(0, 0, 0);
+    }
+}
