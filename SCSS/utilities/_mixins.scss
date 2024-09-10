@@ -1,5 +1,11 @@
-@mixin flex ($flex, $justify, $align) {
+@mixin standardFlex ($flex, $justify, $align) {
     display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin center ($textAlign, $justify, $align) {
+    text-align: $textAlign;
     justify-content: $justify;
     align-items: $align;
 }

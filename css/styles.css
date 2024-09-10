@@ -1,13 +1,40 @@
 @charset "UTF-8";
-/* se puede usar el @use para referir a un módulo de scss particular que tiene la variable que queremos
- y se le puede poner as "nombre" para darle un nombre que nos quede cómodo y luego usarlo con ese 
- "nombre".$variable 
-
- ver el orden de las importaciones para que las reconozca en orden correctamente
-
- ver que con los extends usa el % al principio de la variable
-
- sass --watch scss/styles.css css/styles.css*/
+/* Estilos para pantallas de menos de 768px (dispositivos móviles) */
+@media (max-width: 768px) {
+  .header {
+    background-color: rgb(55, 51, 51);
+  }
+  .productContainer {
+    background-color: rgb(55, 51, 51);
+  }
+  .footerIndex {
+    background-color: rgb(55, 51, 51);
+  }
+}
+/* Estilos para pantallas entre 768px y 991.98px (tabletas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    background-color: rgb(30, 27, 27);
+  }
+  .productContainer {
+    background-color: rgb(30, 27, 27);
+  }
+  .footerIndex {
+    background-color: rgb(30, 27, 27);
+  }
+}
+/* Estilos para pantallas mayores de 992px (escritorios) */
+@media (min-width: 1440px) {
+  .header {
+    background-color: rgb(0, 0, 0);
+  }
+  .productContainer {
+    background-color: rgb(0, 0, 0);
+  }
+  .footerIndex {
+    background-color: rgb(0, 0, 0);
+  }
+}
 /* Header style */
 .header {
   background-color: black;
@@ -49,8 +76,9 @@
 .h2Section h2 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
-  align-items: center;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
   color: white;
 }
@@ -70,11 +98,11 @@
 .buttonSections {
   background-color: rgb(83, 79, 79);
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1%;
   flex-direction: column;
-  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
   position: sticky;
   margin: 0.5px;
 }
@@ -84,26 +112,34 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 2rem;
 }
-
 .buttonSections nav a {
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 2rem;
 }
+.buttonSections .h2 {
+  color: white;
+  display: inline-block;
+}
+.buttonSections .input {
+  display: inline-block;
+  height: 4vh;
+}
 
 .generalSearch {
-  display: flex;
   text-align: center;
   justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .nav-item {
   display: flex;
   flex-direction: row;
   gap: 10%;
-  align-content: center;
-  align-items: center;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar {
@@ -113,17 +149,6 @@
   font-size: 4vh;
   color: white;
   padding: 1%;
-}
-
-/*  */
-.buttonSections h2 {
-  color: white;
-  display: inline-block;
-}
-
-.buttonSections input {
-  display: inline-block;
-  height: 4vh;
 }
 
 /*  */
@@ -141,39 +166,25 @@
   background-color: #f8f9fa;
   padding: 1rem;
 }
+.productContainer nav .imgNav {
+  height: 70vh;
+  width: 33%;
+  object-fit: cover;
+}
 
 #carouselExample {
   background-color: black;
   padding: 1%;
 }
 
-.carousel-item {
+.carousel .carousel-item {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
-
-.carousel-item img {
+.carousel .carousel-item .product {
   height: 70vh;
-}
-
-.productNav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem; /* Espacio entre las imágenes */
-}
-
-.imgNav {
-  width: 100px; /* Ancho fijo para las imágenes */
-  height: auto; /* Mantiene la proporción de la imagen */
-}
-
-.productContainer img {
-  height: 70vh;
-  width: 33%;
-  object-fit: cover;
 }
 
 .productForm {
@@ -184,25 +195,25 @@
   margin: 0.5px;
   padding: 2%;
 }
-
-.productForm form {
-  width: 30%;
-  justify-content: center;
-  align-items: center;
-}
-
-.productForm form section {
-  color: white;
-}
-
-.productForm form img {
-  width: 50%;
-  height: 50%;
+.productForm section img {
+  height: 100vh;
+  width: 50vh;
   object-fit: cover;
 }
-
-.productForm form input {
+.productForm section p {
+  font-size: 2vh;
+}
+.productForm section .product {
+  height: 10vh;
+}
+.productForm section label {
+  font-size: 10vh;
+}
+.productForm section .input {
   height: 4vh;
+}
+.productForm section select {
+  font-size: 2vh;
 }
 
 /** Products format */
@@ -216,13 +227,10 @@
 
 /** Class for center all components */
 /* Main format */
-.imgPrincipal {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mainImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(38, 44, 58);
 }
 
@@ -257,13 +265,11 @@
   margin: 0;
   text-align: center;
 }
-
-.footerIndex img {
+.footerIndex .img {
   width: 15vh;
   height: 10vh;
 }
-
-.footerIndex p {
+.footerIndex .p {
   font-size: 1.5rem;
   color: rgb(222, 10, 173);
   align-items: center;
@@ -279,33 +285,5 @@
 }
 
 /** Footer format*/
-/* Estilos generales */
-/* Estilos para pantallas de menos de 768px (dispositivos móviles) */
-@media (max-width: 767.98px) {
-  .productContainer {
-    background-color: rgb(55, 51, 51);
-  }
-  .footerIndex {
-    background-color: rgb(55, 51, 51);
-  }
-}
-/* Estilos para pantallas entre 768px y 991.98px (tabletas) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .productContainer {
-    background-color: rgb(30, 27, 27);
-  }
-  .footerIndex {
-    background-color: rgb(30, 27, 27);
-  }
-}
-/* Estilos para pantallas mayores de 992px (escritorios) */
-@media (min-width: 992px) {
-  .productContainer {
-    background-color: rgb(0, 0, 0);
-  }
-  .footerIndex {
-    background-color: rgb(0, 0, 0);
-  }
-}
 
 /*# sourceMappingURL=styles.css.map */
