@@ -56,9 +56,16 @@
 #h3 {
   color: white;
 }
-
 /** H format */
+
 /* Format principal Links */
+.btn-shoppingCart{
+  display: flex;
+  padding: 1%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .buttonSections {
   background-color: rgb(83, 79, 79);
   display: flex;
@@ -149,6 +156,25 @@
 }
 .carousel .carousel-item .product {
   height: 70vh;
+}
+
+.shoppingCart {
+  display: flex;
+  background-color: black;
+  margin: 2.5px;
+  padding: 10%;
+}
+.shoppingP{
+  display: flex;
+  background-color: black;
+  font-size: 5vh;
+  color : white;
+}
+.shoppingImg{
+  display: flex;
+  background-color: black;
+  height: 20vh;
+  width: 20vh;
 }
 
 .productForm {
